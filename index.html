@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ebg corp.</title>
+    <style>
+      .header-base {
+          font-family: "Play", sans-serif;
+          font-weight: 1500;
+          font-size: 50px;
+          font-style: bold;
+          color: white;
+      }
+
+      .header{
+          font-family: "Play", sans-serif;
+          font-weight: 1500;
+          font-size: 40px;
+          font-style: bold;
+          color: white;
+      }
+
+      .footer-base {
+          font-family: "Play", sans-serif;
+          font-weight: 1500;
+          font-size: 30px;
+          font-style: bold;
+          color: white;  
+          height: 55px;
+      }
+
+      html, body {
+          max-width: 100%;
+          overflow-x: hidden;
+          margin: 0;
+          padding: 0;
+      }
+
+      table {
+          font-family: Play, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+          background-color: rgb(25, 25, 25);
+          color: white;
+      }
+
+      .rule-number {
+          text-align: left;
+          padding: 10px;
+          transition-duration: 0.3s;
+          width: 70px; /* Добавляем фиксированную ширину */
+          min-width: 70px; /* Гарантируем, что ширина не будет меньше */
+          max-width: 70px; /* Гарантируем, что ширина не будет больше */
+      }
+      .rule-text {
+        text-align: left;
+        padding: 10px;
+        transition-duration: 0.3s;
+      }
+      .rule-number:hover {
+          padding-top: 25px;
+          padding-bottom: 25px;
+          background-color: rgb(65, 55, 15);
+      }
+      .rule-text:hover {
+          padding-top: 25px;
+          padding-bottom: 25px;
+          background-color: rgb(65, 55, 15);
+      }
+
+      tr:nth-child(even) {
+        background-color: rgb(20, 20, 20);
+      }
+
+      button.base {
+          font-family: "Play", sans-serif;
+          font-weight: 400;
+          font-style: bold;
+          text-align: center;
+          font-size: 35px;
+          width: 100%;
+          height: 100%;
+          border: 0;
+          background-color: transparent;
+          color: white;
+          transition-duration: 0.5s;
+          cursor: pointer;
+      }
+
+      button.base:hover {
+          filter: drop-shadow(0 0 1rem rgb(255, 215, 0));
+      }
+
+      body {
+          background-color: #070707;
+      }
+
+      .gold {
+          color: rgb(255, 215, 0);
+      }
+
+      a.names {
+          margin: 0 1%;
+          transition-duration: 0.3s;
+          position: relative;
+          display: inline-block;
+      }
+
+      a.names:hover {
+          font-size: 40px;
+          color: rgb(255, 215, 0);
+      }
+
+      /* Аватарки игроков */
+      .avatar {
+          display: none;
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          border: 3px solid rgb(255, 215, 0);
+          object-fit: cover;
+          margin-bottom: 10px;
+      }
+
+      a.names:hover .avatar {
+          display: block;
+      }
+
+      /* Новые стили для золотых акцентов */
+      .gold-shadow {
+          filter: drop-shadow(0 2px 0.75rem rgb(255, 215, 0));
+      }
+      .gold-bg {
+          background-color: rgb(40, 35, 15);
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play" />
+  </head>
+  
+
+  
+<body>
+    <div style="text-align: center; width: 100%; position: absolute; left: 0; top: 0;">
+      <div class="zhead"></div>
+      <div style="margin: 9% 15% 17% 15%;">
+        <!-- КОММЕНТАРИЙ 1: Здесь можно добавить/удалить запрещенные слова -->
+        <h2 class="header">Запрещенные слова на сервере😨</h2>
+        <br />
+        <table>
+          <tr>
+            <th class="rule-number">1.1.</th>
+            <th class="rule-text">
+              Запрещенно говорить " Абоба "
+            </th>
+          </tr>
+          <tr>
+            <th class="rule-number">1.2.</th>
+            <th class="rule-text">
+              Запрещенно говорить " Купи доту плюс "
+            </th>
+          </tr>
+          <tr>
+            <th class="rule-number">1.3.</th>
+            <th class="rule-text">
+              Запрещенно говорить " Дай я мид встану "
+            </th>
+          </tr>
+          <tr>
+            <th class="rule-number">1.4.</th>
+            <th class="rule-text">
+              Запрещенно произносить названия итальянских животных ( кроме Брр брр Патапим )
+            </th>
+          </tr>
+          <tr>
+            <th class="rule-number">1.5.</th>
+            <th class="rule-text">
+              Запрещенно говорить слова в которых есть буквы Л-А-Б-У-Б-У ( кроме чебурашки )
+            </th>
+          </tr>
+        </table>
+        <br />
+
+        <!-- КОММЕНТАРИЙ 2: Здесь можно редактировать раздел запрещенных действий -->
+        <h2 class="header">Запрещенные действия🤑</h2>
+        <br />
+        <table>
+          <tr>
+            <th class="rule-number">2.1.</th>
+            <th class="rule-text">soundpad ( ток если адмен разрешил )</th>
+          </tr>
+          <tr>
+            <th class="rule-number">2.2.</th>
+            <th class="rule-text">
+              не называть диниса ( ya ) динисом
+            </th>
+          </tr>
+          <tr>
+            <th class="rule-number">2.3.</th>
+            <th class="rule-text">
+               frut nigga не может находится в войсе 10 сек
+            </th>
+          </tr>
+          <tr>
+            <th class="rule-number">2.3.1.</th>
+            <th class="rule-text">
+              запрет женщин на сервере
+            </th>
+          </tr>
+          <tr>
+            <th class="rule-number">2.3.2.</th>
+            <th class="rule-text">
+              обои с машинками
+            </th>
+          </tr>
+        </table>
+        <br />
+
+        <!-- НОВАЯ КАТЕГОРИЯ: Админ приказал -->
+        <h2 class="header">Админ приказал😘</h2>
+        <br />
+        <table>
+          </tr>
+          <tr>
+            <th class="rule-number">3.1.</th>
+            <th class="rule-text">
+              проходить iq тест с митой на яндекс играх ( по приказу админа )
+            </th>
+          </tr>
+          <tr>
+            <th class="rule-number">3.2.</th>
+            <th class="rule-text">
+              кто прочитал тот лох ( кроме меня и меня )
+            </th>
+          </tr>
+        </table>
+        <br />
+
+      </div>
+      <div class="zteam"></div>
+    </div>
+    <script>
+      document.querySelector(".zhead").innerHTML = 
+      `<table class="gold-shadow" style="width: 100%; text-align: center; background-color: #070707;">
+          <form>
+              <tr class="gold-bg">
+                  <td class="header-base" style="text-align: center;"><span class="gold">Еблан</span>оград😎</td>
+                  <td style="text-align: left;">
+                    <button class="base" onclick="window.location.href = 'https://discord.gg/A7g6xWBUty'">
+                      Discord<span class="gold"></span>
+                    </button>
+                  </td>
+
+                  <td style="text-align: left;">
+                    <button class="base" onclick="window.location.href = 'staff.html'">
+                      Staff<span class="gold"></span>
+                    </button>
+                  </td>
+              </tr>
+          </form>
+      </table>`;
+
+      const playerAvatars = {
+        "ay.ru":        "https://cdn.discordapp.com/attachments/1349438925533483069/1405193259864821892/f0547d303b59839c872409ee7a029417542e29fa_full.jpg?ex=689defb4&is=689c9e34&hm=412ab45b28306f775d9d9f0701ee19d0977cff6137fa0335ec58e11453cdf2d5&",
+        "open source":  "https://cdn-icons-png.freepik.com/512/3291/3291667.png",
+        "ya":           "https://cdn.discordapp.com/avatars/728582036322910260/534e732dde38b5c1777ecb142be74aac.png?size=512",
+        "xamlocmlebom": "https://cdn.discordapp.com/avatars/1075878978881073239/951288a49bfdce803ff83632ad5c3a38.png?size=512",
+        "solt":         "https://cdn.discordapp.com/avatars/664765995117969408/442d6ececd2f9d9c332cdbcf12f875ee.png?size=512",
+        "frut nigga":   "https://cdn.discordapp.com/avatars/1152635364616454174/ecc55750486f10ae026c91394dc2e447.png?size=512"
+      };
+
+      let playersHTML = '';
+      for (const [name, avatar] of Object.entries(playerAvatars)) {
+        playersHTML += `
+          <a class="names">
+            ${name}
+            <img src="${avatar}" class="avatar" alt="${name}">
+          </a>
+        `;
+      }
+      
+
+      
+      document.querySelector(".zteam").innerHTML = 
+      `<table class="gold-shadow" style="width: 100%; text-align: center; background-color: #0c0c0c;">
+          <tr class="gold-bg">
+              <td class="footer-base" style="text-align: center;" colspan="50"><span class="gold">ebg</span> corp.</td>
+          </tr>
+          <tr class="gold-bg">
+              <td class="footer-base" style="text-align: center;">
+                  ${playersHTML}
+              </td>
+          </tr>
+      </table>`;
+    </script>
+  </body>
+</html>
