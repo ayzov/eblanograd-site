@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff - ebg corp.</title>
+    <link rel="icon" href="https://otkritkis.com/wp-content/uploads/2021/11/601296_332370960200079_1956793086_n.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: #070707;
+            color: white;
+            font-family: "Play", sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url('https://cdn.discordapp.com/attachments/1349438925533483069/1408456250806632590/otbiv.gif?ex=68a9ce9a&is=68a87d1a&hm=3965bcc0fb5827cd381da26202cd44af15a655d833352a9f93a42c7501cc8093&');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border: 3px solid rgb(255, 215, 0);
+            max-width: 80%;
+            position: relative;
+            z-index: 11;
+        }
+        
+        .gif-container {
+            margin-bottom: 30px;
+        }
+        
+        .music-player {
+            margin-top: 20px;
+            background-color: rgb(40, 35, 15);
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 20px auto;
+        }
+        
+        .back-button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: rgb(40, 35, 15);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Play", sans-serif;
+            font-size: 20px;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 12;
+        }
+        
+        .back-button:hover {
+            background-color: rgb(65, 55, 15);
+            transform: scale(1.05);
+        }
+        
+        .title {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: rgb(255, 215, 0);
+            position: relative;
+            z-index: 12;
+        }
+        
+        /* Анимация мерцания */
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .flicker {
+            animation: flicker 2s infinite;
+        }
+        
+        /* Летающая гифка */
+        .flying-gif {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            z-index: 5;
+        }
+        
+        /* Строительные элементы */
+        .construction {
+            position: absolute;
+            font-size: 24px;
+            color: yellow;
+            animation: blink 1s infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .warning-sign {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: orange;
+            border: 3px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            animation: rotate 4s infinite linear;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Эффект сварки */
+        .welding {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255,255,0,0.8) 0%, rgba(255,255,0,0) 70%);
+            border-radius: 50%;
+            animation: weldFlash 2s infinite;
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        @keyframes weldFlash {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Арматура */
+        .rebar {
+            position: absolute;
+            width: 150px;
+            height: 20px;
+            background: linear-gradient(to right, #888, #aaa, #888);
+            transform: rotate(45deg);
+            border-radius: 5px;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        /* Падающие инструменты */
+        .falling-tool {
+            position: absolute;
+            font-size: 30px;
+            top: -50px;
+            animation: fall 5s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        @keyframes fall {
+            from { transform: translateY(0); }
+            to { transform: translateY(100vh); }
+        }
+        
+        /* Слой для задних элементов */
+        .background-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play" />
+</head>
+<body>
+    <!-- Слой для фоновых элементов -->
+    <div class="background-elements" id="bgElements"></div>
+    
+    <div class="overlay">
+        <div class="container">
+            <h1 class="title flicker">under construction🔨🪓</h1>
+            
+            <div class="gif-container">
+                <img src="https://cdn.discordapp.com/attachments/1349438925533483069/1408456250806632590/otbiv.gif?ex=68a9ce9a&is=68a87d1a&hm=3965bcc0fb5827cd381da26202cd44af15a655d833352a9f93a42c7501cc8093&" alt="Funny GIF" width="400">
+            </div>
+            
+            <div class="music-player">
+                <audio controls autoplay loop>
+                    <source src="https://cdn.discordapp.com/attachments/1349438925533483069/1408456269177557042/dubstep.mp3?ex=68a9ce9e&is=68a87d1e&hm=4a9a7414e674a3f0791e2a5f2ab45701462d10fdeeede45e7300a0cc7a0e92b0&" type="audio/mpeg">
+                    хаха]лохыыыы
+                </audio>
+            </div>
+            
+            <button class="back-button" onclick="window.location.href='index.html'">Вернуться на главную</button>
+        </div>
+    </div>
+    
+    <!-- Летающая гифка -->
+    <img id="flyingGif" class="flying-gif" src="https://cdn.discordapp.com/attachments/1349438925533483069/1408456250374750288/molotok.gif?ex=68a9ce99&is=68a87d19&hm=895199dbe32b57c5fea021af132301852c4aa305ec1c85ee7f94d94ddd29130d&" alt="Flying GIF">
+    
+    <script>
+        // Летающая гифка как DVD
+        const flyingGif = document.getElementById('flyingGif');
+        let x = 0;
+        let y = 0;
+        let dx = 2;
+        let dy = 2;
+        
+        function animateGif() {
+            const maxX = window.innerWidth - flyingGif.width;
+            const maxY = window.innerHeight - flyingGif.height;
+            
+            x += dx;
+            y += dy;
+            
+            if (x <= 0 || x >= maxX) {
+                dx = -dx;
+                x = x <= 0 ? 0 : maxX;
+            }
+            
+            if (y <= 0 || y >= maxY) {
+                dy = -dy;
+                y = y <= 0 ? 0 : maxY;
+            }
+            
+            flyingGif.style.left = x + 'px';
+            flyingGif.style.top = y + 'px';
+            
+            requestAnimationFrame(animateGif);
+        }
+        
+        // Создаем строительные элементы в фоновом слое
+        function createConstructionElements() {
+            const bgElements = document.getElementById('bgElements');
+            const signs = ['⚠️', '🚧', '🔧', '🛠️', '🔨', '⛏️'];
+            const tools = ['🔨', '🪚', '🪓', '🔧', '⛏️', '📌'];
+            
+            // Предупреждающие знаки
+            for (let i = 0; i < 5; i++) {
+                const sign = document.createElement('div');
+                sign.className = 'warning-sign';
+                sign.textContent = signs[Math.floor(Math.random() * signs.length)];
+                sign.style.left = Math.random() * 90 + 'vw';
+                sign.style.top = Math.random() * 90 + 'vh';
+                bgElements.appendChild(sign);
+            }
+            
+            // Надписи "строительство"
+            for (let i = 0; i < 10; i++) {
+                const construction = document.createElement('div');
+                construction.className = 'construction';
+                construction.textContent = '🚧 UNDER CONSTRUCTION 🚧';
+                construction.style.left = Math.random() * 90 + 'vw';
+                construction.style.top = Math.random() * 90 + 'vh';
+                bgElements.appendChild(construction);
+            }
+            
+            // Эффекты сварки
+            for (let i = 0; i < 3; i++) {
+                const welding = document.createElement('div');
+                welding.className = 'welding';
+                welding.style.left = Math.random() * 90 + 'vw';
+                welding.style.top = Math.random() * 90 + 'vh';
+                bgElements.appendChild(welding);
+            }
+            
+            // Арматура
+            for (let i = 0; i < 7; i++) {
+                const rebar = document.createElement('div');
+                rebar.className = 'rebar';
+                rebar.style.left = Math.random() * 90 + 'vw';
+                rebar.style.top = Math.random() * 90 + 'vh';
+                rebar.style.transform = `rotate(${Math.random() * 180}deg)`;
+                bgElements.appendChild(rebar);
+            }
+            
+            // Падающие инструменты
+            setInterval(() => {
+                if (Math.random() < 0.3) { // 30% chance to create a falling tool
+                    const tool = document.createElement('div');
+                    tool.className = 'falling-tool';
+                    tool.textContent = tools[Math.floor(Math.random() * tools.length)];
+                    tool.style.left = Math.random() * 90 + 'vw';
+                    tool.style.animationDuration = (3 + Math.random() * 4) + 's';
+                    bgElements.appendChild(tool);
+                    
+                    // Удаляем инструмент после падения
+                    setTimeout(() => {
+                        if (tool.parentNode) {
+                            bgElements.removeChild(tool);
+                        }
+                    }, 5000);
+                }
+            }, 2000);
+        }
+        
+        // Запускаем анимации после загрузки страницы
+        window.onload = function() {
+            animateGif();
+            createConstructionElements();
+        };
+    </script>
+</body>
+</html>
