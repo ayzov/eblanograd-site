@@ -16,7 +16,6 @@
             margin: 0;
             height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             overflow: hidden;
@@ -33,13 +32,59 @@
             pointer-events: none;
         }
 
+        /* ОСНОВНОЕ МЕНЮ (ПО ЦЕНТРУ) */
         .main-ui {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             background: #000;
             padding: 20px;
             border: 1px solid #222;
             width: 280px;
+        }
+
+        /* ПАНЕЛЬ ВИКИ (СПРАВА) */
+        .wiki-panel {
+            position: absolute;
+            left: calc(50% + 170px); /* Центр экрана + половина ширины main-ui + отступ */
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border: 1px solid #222;
+            width: 400px;
+            max-height: 85vh;
+            overflow-y: auto;
+            text-transform: none;
+            font-size: 12px;
+        }
+
+        .wiki-panel::-webkit-scrollbar { width: 3px; }
+        .wiki-panel::-webkit-scrollbar-thumb { background: #333; }
+
+        .wiki-header {
+            color: #fff;
+            font-size: 18px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* РАЗРЕШАЕМ КОПИРОВАНИЕ БИНДОВ */
+        .copyable-binds {
+            user-select: text !important;
+            -webkit-user-select: text !important;
+            color: #afff94; /* Слегка зеленоватый для выделения команд */
+            background: rgba(255, 255, 255, 0.03);
+            padding: 10px;
+            margin-bottom: 15px;
+            font-family: 'Courier New', monospace;
+            border-left: 2px solid #444;
+        }
+
+        .info-section {
+            color: #999;
+            line-height: 1.4;
         }
 
         .header {
@@ -70,9 +115,7 @@
 
         .disabled {
             color: #2B2B2B;
-            text-decoration: none;
             display: block;
-            outline: none;
         }
 
         .old-section {
@@ -89,26 +132,16 @@
             color: #333;
         }
 
-        .old-section a:hover {
-            color: #fff;
-            background: #111;
-        }
-
         .footer {
             position: absolute;
             bottom: 20px;
             font-size: 12px;
-            z-index: 2;
+            z-index: 4;
         }
 
         .footer a {
             color: #ff0000;
             display: inline;
-        }
-
-        .footer a:hover {
-            background: #ffffff;
-            color: #000;
         }
     </style>
 </head>
@@ -131,11 +164,38 @@
         </div>
     </div>
 
+    <div class="wiki-panel">
+        <div class="wiki-header">WIKI</div>
+        
+        <div class="copyable-binds">
+            bind "кнопка" fake<br>
+            bind "кнопка" +alt1<br>
+            bind "кнопка" +alt2<br>
+            bind "кнопка" +altlook<br>
+            bind "кнопка" +hmcd_holdbreath<br>
+            bind "кнопка" hg_change_posture<br>
+            bind "кнопка" hmcd_togglelaser<br>
+            hg_weaponsettings
+        </div>
+
+        <div class="info-section">
+            <p>Урон крайне зависит от места, силы и типа оружия. При каждом выстреле просчитывается траектория пули, которая может задеть артерии, кости и органы.</p>
+            <p>Смерть происходит при отмирании мозга (через время без кислорода).</p>
+            <p>Медицина требует ума: неправильное использование может навредить. Проверить состояние: ПКМ+R на голову. СЛР: ПКМ по груди и зажать ЛКМ.</p>
+            
+            <small>
+                • Бинты - венозное кровотечение<br>
+                • Бета блокаторы - снижение адреналина<br>
+                • Пакеты крови - +500мл крови<br>
+                • Декомпрессионная игла - пневмоторакс<br>
+                • Морфий - обезболивающее / подъем сознания<br>
+                • Жгут - артериальное кровотечение
+            </small>
+        </div>
+    </div>
+
     <div class="footer">
         _OWNER: <a href="https://steamcommunity.com/id/ay_ru/" target="_blank">ay.ru</a>
     </div>
-
 </body>
 </html>
-
-
