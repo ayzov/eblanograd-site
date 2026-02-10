@@ -2,801 +2,151 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Еблан тупой пидорас пидофил гей фурри хищник похотливый педофил</title>
-
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/1367493451918213165/1367928396264378458/KW-lPf-shwREMXRGzDUU3agFkzUo7mPownILZfpP9He-CMMhVgbXgYwtacFxwg0DJReO4-as3xJJXeR-Wmg3fQ16sZgb3IdVAIHQh2z0FYlp0aJhCX4jnVK3CNNdyHPRycukxqTEI4Gs7XyV8BZcZVPW-KcAjj_VTFxE2t090siYDOa-uz4WV6OQB0QdVRQb-pTQ4TgbEYkmMiiif5l.gif?ex=68d0ea58&is=68cf98d8&hm=fa21b015eee5ffe0bc92c7efcf1337ae0a4da5326700c5d1205760c436ac7995&" type="image/x-icon">
-
+    <title>eblanograd</title>
     <style>
+        * { 
+            cursor: crosshair; 
+            user-select: none; 
+            -webkit-user-select: none;
+        } 
         body {
             background: #000;
-            color: #fff;
-            font-family: monospace;
+            color: #ccc;
+            font-family: 'Courier New', monospace;
             margin: 0;
-            padding: 20px;
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+            text-transform: uppercase;
         }
-        
-        .container {
-            max-width: 500px;
+
+        .bg-text {
+            position: absolute;
+            font-size: 15vw;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.05);
+            z-index: 1;
+            filter: blur(15px);
+            pointer-events: none;
+        }
+
+        .main-ui {
+            position: relative;
+            z-index: 2;
+            background: #000;
+            padding: 20px;
+            border: 1px solid #222;
+            width: 280px;
+        }
+
+        .header {
+            color: #fff;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 5px;
             text-align: center;
         }
-        
-        h1 {
-            color: #ff4444;
-            margin-bottom: 30px;
-            font-size: 24px;
+
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
-        
-        .word {
-            background: #222;
-            margin: 5px 0;
-            padding: 10px;
-            border-left: 3px solid #ff4444;
+
+        a {
+            color: #666;
+            text-decoration: none;
+            display: block;
+            outline: none;
+        }
+
+        a:hover {
+            color: #fff;
+            background: #111;
+        }
+
+        .disabled-blink {
+            color: #ff0000;
+            pointer-events: none;
+            /* Изменил длительность на 0.7s для более редкого моргания */
+            animation: random-blink 0.7s infinite;
+        }
+
+        @keyframes random-blink {
+            0% { opacity: 1; }
+            5% { opacity: 0; }
+            10% { opacity: 1; }
+            25% { opacity: 1; }
+            30% { opacity: 0; }
+            32% { opacity: 1; }
+            60% { opacity: 1; }
+            65% { opacity: 0; }
+            67% { opacity: 1; }
+            100% { opacity: 1; }
+        }
+
+        .old-section {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px dashed #222;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .old-section a {
+            font-size: 11px;
+            color: #333;
+        }
+
+        .old-section a:hover {
+            color: #fff;
+            background: #111;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 12px;
+            z-index: 2;
+        }
+
+        .footer a {
+            color: #ff0000;
+            display: inline;
+        }
+
+        .footer a:hover {
+            background: #ffffff;
+            color: #000;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>ЗАПРЕЩЕННЫЕ СЛОВА МОЕГО НИКОМУ НЕ НУЖНОГО СЕРВЕРА</h1>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
-        <div class="word">окак</div>
+<body oncontextmenu="return false;">
 
+    <div class="bg-text">eblanograd</div>
+
+    <div class="main-ui">
+        <div class="header">eblanograd files</div>
+        
+        <div class="links-group">
+            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3578228506" target="_blank">[ CONTENT ]</a>
+            <a href="https://github.com/uzelezz123/Z-City" target="_blank">[ BASE ]</a>
+            <div class="disabled-blink">[ ASSEMBLY ]</div>
+        </div>
+
+        <div class="old-section">
+            <a href="https://github.com/sadsalat/Orignal-Homigrad" target="_blank">> OLD_EBG_BASE_1</a>
+            <a href="https://github.com/sadsalat/Orignal-Homigrad/tree/sandboxold" target="_blank">> OLD_EBG_BASE_2</a>
+        </div>
     </div>
+
+    <div class="footer">
+        _OWNER: <a href="https://steamcommunity.com/id/ay_ru/" target="_blank">ay.ru</a>
+    </div>
+
 </body>
 </html>
-
-
-
