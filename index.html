@@ -68,24 +68,11 @@
             background: #111;
         }
 
-        .disabled-blink {
-            color: #ff0000;
-            pointer-events: none;
-            /* Изменил длительность на 0.7s для более редкого моргания */
-            animation: random-blink 0.7s infinite;
-        }
-
-        @keyframes random-blink {
-            0% { opacity: 1; }
-            5% { opacity: 0; }
-            10% { opacity: 1; }
-            25% { opacity: 1; }
-            30% { opacity: 0; }
-            32% { opacity: 1; }
-            60% { opacity: 1; }
-            65% { opacity: 0; }
-            67% { opacity: 1; }
-            100% { opacity: 1; }
+        .disabled {
+            color: #2B2B2B;
+            text-decoration: none;
+            display: block;
+            outline: none;
         }
 
         .old-section {
@@ -135,7 +122,7 @@
         <div class="links-group">
             <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3578228506" target="_blank">[ CONTENT ]</a>
             <a href="https://github.com/uzelezz123/Z-City" target="_blank">[ BASE ]</a>
-            <div class="disabled-blink">[ ASSEMBLY ]</div>
+            <div class="disabled">[ ASSEMBLY ]</div>
         </div>
 
         <div class="old-section">
@@ -150,3 +137,5 @@
 
 </body>
 </html>
+
+
